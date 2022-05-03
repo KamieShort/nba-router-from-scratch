@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { fetchCharacters } from '../../services/fetch';
 
 export default function CharacterList() {
@@ -28,7 +29,9 @@ export default function CharacterList() {
         <div>
           {characters.map((character) => (
             <div key={character.id}>
-              <h3>{character.name}</h3>
+              <Link to={`/characters/${character.id}`}>
+                <h3>{character.name}</h3>
+              </Link>
               <p>Gender: {character.gender}</p>
               <p>Status: {character.status}</p>
               <p>Species: {character.species}</p>

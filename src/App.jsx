@@ -12,7 +12,7 @@ export default function App() {
           <CharacterList />
         </Route>
 
-        <Route exact path="/characters/:id">
+        <Route path="/characters/:id">
           Details
           <CharacterDetails />
         </Route>

@@ -4,10 +4,8 @@ export async function fetchCharacters() {
   return data.results;
 }
 
-// export async function fetchDetails() {
-//   const resp = await fetch(
-//     `https://rickandmortyapi.com/api/character?status=${statusParam}`
-//   );
-//   const data = await resp.json();
-//   return data;
-// }
+export async function fetchDetails(id) {
+  const resp = await fetch(`https://rickandmortyapi.com/api/character?${id}`);
+  const data = await resp.json();
+  return data;
+}

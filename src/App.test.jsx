@@ -16,7 +16,7 @@ describe('App', () => {
 
     screen.getByText(/loading/i);
 
-    const link = await screen.findByText('Rick Sanchez');
-    userEvent.click(link);
+    const mortylink = await screen.findByText('Morty Smith');
+    userEvent.click(mortylink);
   });
 });
