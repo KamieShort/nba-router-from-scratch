@@ -14,7 +14,6 @@ export default function CharacterDetails() {
       const data = await fetchDetails(id);
 
       setCharacter(data);
-      console.log(data);
 
       setLoading(false);
     };

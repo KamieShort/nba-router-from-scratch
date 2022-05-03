@@ -13,7 +13,6 @@ export default function App() {
         </Route>
 
         <Route path="/characters/:id">
-          Details
           <CharacterDetails />
         </Route>
       </Switch>

@@ -12,7 +12,7 @@ export default function CharacterList() {
       const data = await fetchCharacters();
 
       setCharacters(data);
-      console.log(data);
+
       setLoading(false);
     };
     getCharacters();
