@@ -6,23 +6,23 @@ import CharacterList from './views/Characters/CharacterList';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          Check out these <Link to="/characters">Characters</Link>
-        </Route>
+    // <BrowserRouter>
+    //   <Header />
+    //   <Switch>
+    //     <Route exact path="/">
+    //       Check out these <Link to="/characters">Characters</Link>
+    //     </Route>
 
-        <Route exact path="/">
-          <Link to="/">Back Home</Link>
-          <CharacterList />
-        </Route>
+    //     <Route exact path="/">
+    //       <Link to="/">Back Home</Link>
+    <CharacterList />
+    //     </Route>
 
-        <Route exact path="/character/:id">
-          Details
-          <CharacterDetails />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    //     <Route exact path="/characters/:id">
+    //       Details
+    //       <CharacterDetails />
+    //     </Route>
+    //   </Switch>
+    // </BrowserRouter>
   );
 }
