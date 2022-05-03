@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export default function CharacterDetails() {
   const [character, setCharacter] = useState({});
   const [loading, setLoading] = useState(true);
-  const id = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     const getDetails = async () => {
