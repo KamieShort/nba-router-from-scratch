@@ -11,13 +11,15 @@ describe('Character Details', () => {
         <CharacterList />
       </MemoryRouter>
     );
-
-    // const heading = await screen.findByText('Character Detail');
-    // expect(heading).toBeInTheDocument();
-
     screen.getByText(/loading/i);
 
-    const mortylink = await screen.findByText('Morty Smith');
-    userEvent.click(mortylink);
+    const heading = await screen.findByText('Character List');
+    expect(heading).toBeInTheDocument();
+
+    const mortyLink = await screen.findByText('Morty Smith');
+    userEvent.click(mortyLink);
+
+    const rickLink = await screen.findByText('Rick Sanchez');
+    userEvent.click(rickLink);
   });
 });

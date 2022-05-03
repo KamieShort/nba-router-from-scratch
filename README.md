@@ -21,5 +21,5 @@ x A list of items are shown on page load 2
 x Detail Page info remains on page refresh 2
 x Use a Switch Component inside of Router 2
 x Testing Navigation with MemoryRouter 3
-Testing details page directly with initialEntries prop 3
-Deployed on Netlify with passing CI 2
+x Testing details page directly with initialEntries prop 3
+x Deployed on Netlify with passing CI 2

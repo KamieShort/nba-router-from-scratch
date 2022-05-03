@@ -32,7 +32,12 @@ export default function CharacterDetails() {
           <p>Gender: {character.gender}</p>
           <p>Status: {character.status}</p>
           <p>Species: {character.species}</p>
-          <img src={character.image} height="150px" />
+          <img
+            src={character.image}
+            alt={`Image of ${character.name}`}
+            height="350px"
+            border=" 3px solid black"
+          />
         </div>
       )}
     </>
