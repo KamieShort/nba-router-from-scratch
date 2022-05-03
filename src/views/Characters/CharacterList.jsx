@@ -29,9 +29,9 @@ export default function CharacterList() {
           {characters.map((character) => (
             <div key={character.id}>
               <h3>{character.name}</h3>
-              <p>{character.gender}</p>
-              <p>{character.status}</p>
-              <p>{character.species}</p>
+              <p>Gender: {character.gender}</p>
+              <p>Status: {character.status}</p>
+              <p>Species: {character.species}</p>
               <img src={character.image} height="150px" />
             </div>
           ))}

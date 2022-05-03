@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+import userEvent from '@testing-library/user-event';
 import App from './App';
 
 describe('App', () => {
@@ -15,7 +16,7 @@ describe('App', () => {
 
     screen.getByText(/loading/i);
 
-    const earth = await screen.findByText('Earth');
-    expect(earth).toBeInTheDocument();
+    const link = await screen.findByText('Rick Sanchez');
+    userEvent.click(link);
   });
 });
