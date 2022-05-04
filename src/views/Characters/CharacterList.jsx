@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchCharacters } from '../../services/fetch';
+import styles from './CharacterList.css';
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -18,7 +19,7 @@ export default function CharacterList() {
     getCharacters();
   }, []);
 
-  if (loading) return <div className="loader">Loading...</div>;
+  if (loading) return <div>Loading...</div>;
 
   return (
     <>
@@ -26,7 +27,7 @@ export default function CharacterList() {
       {loading ? (
         <p>Loading ...</p>
       ) : (
-        <div>
+        <div className={styles.list}>
           {characters.map((character) => (
             <div key={character.id}>
               <Link to={`/characters/${character.id}`}>

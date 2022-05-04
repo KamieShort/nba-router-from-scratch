@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchDetails } from '../../services/fetch';
 import { Link } from 'react-router-dom';
+import styles from './CharacterDetails.css';
 
 export default function CharacterDetails() {
   const [character, setCharacter] = useState({});
@@ -27,7 +28,7 @@ export default function CharacterDetails() {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div>
+        <div className={styles.details}>
           <h3>{character.name}</h3>
           <p>Gender: {character.gender}</p>
           <p>Status: {character.status}</p>
