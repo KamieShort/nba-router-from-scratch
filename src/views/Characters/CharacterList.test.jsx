@@ -19,6 +19,10 @@ describe('Character Details', () => {
     const mortyLink = await screen.findByText('Morty Smith');
     userEvent.click(mortyLink);
 
+    screen.getByRole('img', { name: /image of morty smith/i });
+
+    screen.getByAltText(/image of morty smith/i);
+
     const rickLink = await screen.findByText('Rick Sanchez');
     userEvent.click(rickLink);
   });
