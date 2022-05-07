@@ -6,7 +6,7 @@ import CharacterDetails from './CharacterDetails';
   it('Should render one character by id', async () => {
     render(
       <MemoryRouter>
-        <CharacterDetails />
+        <CharacterDetails initialEntries={['/characters/:id']} />
       </MemoryRouter>
     );
 

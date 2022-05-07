@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 
@@ -25,5 +25,13 @@ describe('Character Details', () => {
 
     const rickLink = await screen.findByText('Rick Sanchez');
     userEvent.click(rickLink);
+
+    waitFor(() => {
+      const details = screen.findByText('Character Detail');
+      expect(details).toBeInTheDocument();
+
+      const rickDetails = screen.findByText('Rick Sanchez');
+      expect(rickDetails).toBeInTheDocument();
+    });
   });
 });
