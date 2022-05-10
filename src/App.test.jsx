@@ -7,7 +7,7 @@ import App from './App';
 describe('App', () => {
   it('Should render the character detail page of Summer Smith then allow user to navigate to list of characters', async () => {
     render(
-      <MemoryRouter initialEntries={['/characters/3']} initialIndex={2}>
+      <MemoryRouter initialEntries={['/characters/3']} initialIndex={0}>
         <App />
       </MemoryRouter>
     );
@@ -41,5 +41,19 @@ describe('App', () => {
       name: /abadango cluster princess/i,
     });
     expect(characterList).toBeInTheDocument();
+
+    const abadangoDetailsLink = screen.getByRole('link', {
+      name: /abadango cluster princess/i,
+    });
+    userEvent.click(abadangoDetailsLink);
+
+    const abadangoDetails = await screen.findByText(/gender: female/i);
+
+    expect(abadangoDetails).toBeInTheDocument();
+
+    const abadangoImg = await screen.findByRole('img', {
+      name: /image of abadango cluster princess/i,
+    });
+    expect(abadangoImg).toBeInTheDocument();
   });
 });
