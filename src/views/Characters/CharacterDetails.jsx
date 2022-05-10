@@ -23,7 +23,7 @@ export default function CharacterDetails() {
 
   return (
     <>
-      <h1>Character Detail</h1>
+      <h1>Character Details</h1>
       <Link to="/">All Characters</Link>
       {loading ? (
         <p>Loading...</p>
